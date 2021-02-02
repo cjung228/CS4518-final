@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Notes">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+        <ListView
+            android:id="@+id/classList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btnBannerWeb"
+            android:layout_below="@id/btnAddClass"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="false"
+            android:listSelector="@color/colorPrimary"/>
+
+        <EditText
+            android:id="@+id/classInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnAddClass"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/btnAddClass"
+            android:layout_toLeftOf="@+id/btnAddClass"
+            android:hint="Enter a class" />
+
+        <Button
+            android:id="@+id/btnAddClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_rounded"
+            android:onClick="addClass"
+            android:text="Add Class"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/bannerSite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnBannerWeb"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/btnBannerWeb"
+            android:layout_toLeftOf="@+id/btnBannerWeb"
+            android:text="https://bannerweb.wpi.edu/pls/prod/twbkwbis.P_WWWLogin"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnBannerWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_rounded"
+            android:onClick="goBannerWeb"
+            android:text="Go!"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
